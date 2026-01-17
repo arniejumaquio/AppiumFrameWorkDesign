@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+
+    <groups>
+        <run>
+            <include name="smoke"></include>
+        </run>
+    </groups>
+
+    <listeners>
+        <listener class-name="rahulshettyacademy.Listeners"></listener>
+    </listeners>
+
+    <test name="HomePage Tests">
+        <classes>
+          <class name="rahulshettyacademy.android.ecommerce_demo.ecommerce_tests.Ecommerce_TC_2"></class>
+        </classes>
+    </test>
+
+    <test name="End to End Tests">
+        <classes>
+            <class name="rahulshettyacademy.android.ecommerce_demo.ecommerce_tests.Ecommerce_TC_1"></class>
+        </classes>
+    </test>
+
+
+
+</suite>

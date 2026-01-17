@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Loans Test Suite">
+
+    <!--
+        excluded mobile car loan test
+    -->
+
+    <test name="Car Loan">
+        <classes>
+            <class name="rahulshettyacademy.testng_demo.CarLoanTest">
+                <methods>
+                    <exclude name="mobile.*"></exclude>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Home Loan">
+        <classes>
+            <class name="rahulshettyacademy.testng_demo.HomeLoanTest">
+                <methods>
+                    <exclude name="mobile.*"></exclude>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Personal Loan">
+        <classes>
+            <class name="rahulshettyacademy.testng_demo.PersonalLoanTest"></class>
+            <class name="rahulshettyacademy.testng_demo.PersonalLoanTest2"></class>
+        </classes>
+    </test>
+
+</suite>
