@@ -2,6 +2,7 @@ package rahulshettyacademy;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.Status;
 import io.appium.java_client.AppiumDriver;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
@@ -26,11 +27,12 @@ public class Listeners extends AppActions implements ITestListener {
 
     @Override
     public void onTestSuccess(ITestResult result) {
-
+        extentTest.log(Status.PASS, "Test PASSED");
     }
 
     @Override
     public void onTestFailure(ITestResult result) {
+
         extentTest.fail(result.getThrowable());
         try {
             driver = (AppiumDriver)result.getTestClass().getRealClass().getField("driver").get(result.getInstance());

@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 
 public class PersonalLoanTest2 {
 
-    @BeforeMethod
+    @BeforeMethod(alwaysRun = true)
     public void beforeMethod(){
         System.out.println("Before method is executed");
     }
@@ -23,7 +23,7 @@ public class PersonalLoanTest2 {
     }
 
 
-    @AfterMethod
+    @AfterMethod(alwaysRun = true)
     public void afterMethod(){
         System.out.println("After method is executed");
     }

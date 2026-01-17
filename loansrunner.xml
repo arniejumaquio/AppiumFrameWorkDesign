@@ -2,6 +2,12 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Loans Test Suite">
 
+    <listeners>
+        <listener class-name="rahulshettyacademy.Listeners"></listener>
+    </listeners>
+
+    <parameter name="webUrl" value="https://www.google.com"></parameter>
+    <parameter name="mobilepackage" value="io.package"></parameter>
     <!--
         excluded mobile car loan test
     -->
@@ -9,9 +15,6 @@
     <test name="Car Loan">
         <classes>
             <class name="rahulshettyacademy.testng_demo.CarLoanTest">
-                <methods>
-                    <exclude name="mobile.*"></exclude>
-                </methods>
             </class>
         </classes>
     </test>
@@ -19,9 +22,6 @@
     <test name="Home Loan">
         <classes>
             <class name="rahulshettyacademy.testng_demo.HomeLoanTest">
-                <methods>
-                    <exclude name="mobile.*"></exclude>
-                </methods>
             </class>
         </classes>
     </test>

@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 
 public class PersonalLoanTest {
 
-    @BeforeSuite
+    @BeforeSuite(alwaysRun = true)
     public void setup(){
         System.out.println("Before Suite is executed");
     }
